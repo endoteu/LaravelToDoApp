@@ -75,8 +75,6 @@ class ListsController extends Controller
         $list = ToDoLists::find($id)->where('id',$id)->first();
 
         return view('lists.edit', compact('list'));
-        //$list = ToDoLists::where('id',$id)->pluck('list_name');
-        //return view('lists.edit', ['list_name' => $list[0],'to_do_list_id'=>$id]);
     }
 
     /**
