@@ -106,7 +106,7 @@ class ListsController extends Controller
     public function destroy($id)
     {
         ToDoLists::find($id)->delete();
-        Tasks::where('to_do_list_id',$id)->delete();
+        Tasks::where('to_do_lists_id',$id)->delete();
 
         return redirect()->route('lists.home')
             ->with('success','List ' . $id . ' and it\'s tasks deleted successfully');

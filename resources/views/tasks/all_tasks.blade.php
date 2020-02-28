@@ -16,7 +16,9 @@
 @endif
 
 <div class="panel-body" align="right">
-    <a class="btn btn-primary" href="{{ route('tasks.create',['to_do_lists_id' => $to_do_lists_id]) }}"><i class="fas fa-plus-circle"></i> Add new task</a>
+    @if ($list_completed == false)
+        <a class="btn btn-primary" href="{{ route('tasks.create',['to_do_lists_id' => $to_do_lists_id]) }}"><i class="fas fa-plus-circle"></i> Add new task</a>
+    @endif
 </div>
 <div class="container">
     <h2>All tasks for List #{{$to_do_lists_id}}</h2>

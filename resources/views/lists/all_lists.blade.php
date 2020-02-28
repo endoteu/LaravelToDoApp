@@ -65,7 +65,7 @@
                         {{ csrf_field() }}
                         {{ method_field('DELETE') }}
                         <div class="form-group delete-btn">
-                            <input type="submit" class="btn btn-danger" onclick="return confirm("This action will delete the list and all tasks associated with it! Are you sure you want to DELETE the ?');" value="DELETE">
+                            <input type="submit" class="btn btn-danger" value="DELETE" onclick="return confirm('This action will delete the list and all tasks associated with it! Are you sure you want to DELETE the ?');" >
                         </div>
                     </form>
                 </td>
